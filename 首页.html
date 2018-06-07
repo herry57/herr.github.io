@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+		*{
+				padding: 0;
+				margin: 0;
+			}
+			#outer1{
+				width:1020px;
+				height: 450px;
+				margin: 50px auto;
+				padding: 10px 0;
+				background-color: #D0D0D0;
+				overflow: hidden;
+				position: relative;
+			}
+			#list{
+				/*width: 2600px;*/
+				list-style: none;
+				position: absolute;
+				left: 0px;
+			}
+			#list li{
+				
+				float: left;
+				margin: 0 10px;
+			}
+			#allA{
+				position: absolute;
+				bottom:15px;
+				/*left: 78px;*/
+			}
+			#allA a{
+				float: left;
+				width: 15px;
+				height: 15px;
+				background-color: red;
+				margin: 0 2px;
+				opacity: 0.3;
+				filter: alpha(opacity=50);
+			}
+			#allA a:hover{
+				background-color: black;
+			}
+			#aboutOur{
+				width: 1000px;
+				margin: 0 auto;
+				border: 2px solid #29C35A;
+				border-top-width: 10px;
+			}
+			#ourBar{
+				width: 200px;
+				float: left;
+				margin-top: 32px;
+				
+			}
+			#ourBar li{
+				margin-left:28px;
+				
+				font: 25px/40px "微软雅黑";
+			}
+			#ourBar a{
+				color: red;
+			}
+			#textContent{
+				width: 800px;
+				float: left;
+				border-top: 5px solid black;
+			}
+			#textContent p{
+				font: 23px/40px "微软雅黑";
+				color: black;
+				text-indent: 2em;
+			}
+			.clearfix:after{
+				content: "";
+				clear: both;
+				display: block;
+			}
+		</style>
+		<link rel="stylesheet" type="text/css" href="css/导航.css"/>
+		<script type="text/javascript">
+			window.onload = function(){
+				var list = document.getElementById("list");
+				var imgArr = document.getElementsByTagName("img");
+				list.style.width = imgArr.length*1020+"px";
+				var allA =document.getElementById("allA");
+				var outer = document.getElementById("outer1");
+				var a = document.getElementsByTagName("a");
+				allA.style.left = (outer.offsetWidth-allA.offsetWidth)/2+"px";
+				var i=0;
+				
+				setInterval(function(){
+				
+					i++;
+					if(i==5){
+						i=0;
+					}
+					a[0].onclick = function(){
+						i=-1;
+					};
+					a[1].onclick = function(){
+						i=0;
+					};
+					a[2].onclick = function(){
+						i=1;
+					};
+					a[3].onclick = function(){
+						i=2;
+					};
+					a[4].onclick = function(){
+						i=3;
+					};
+					list.style.left = outer.offsetWidth*(-i)+"px";
+					
+					
+				},2000);
+			};
+		</script>
+	</head>
+	<body>
+		<div id="out">
+			
+		
+		<div class="head">
+			<img src="img/牛的图标.gif"/>
+			<h1>肉牛饲养大全</h1>
+		</div>
+		<div class="navigationBar clearfix">
+			<ul>
+				<li><a href="首页.html">首页</a></li>
+				<li><a href="测算牛的营养配方.html">营养配方</a></li>
+				<li><a href="成本与利润.html">利润与成本</a></li>
+				<li><a href="牛病防御.html">疾病预防</a></li>
+				<li><a href="西门塔尔牛.html">肉牛品种</a></li>
+			</ul>
+		</div>
+		
+		<div id="outer1">
+		<ul id="list">
+			<li><img src="img/轮播图1.gif"/></li>
+			<li><img src="img/轮播图2.gif"/></li>
+			<li><img src="img/轮播图3.gif"/></li>
+			<li><img src="img/轮播图4.gif"/></li>
+			<li><img src="img/轮播图5.gif"/></li>
+		</ul>
+		<div id="allA">
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+			<a href="#"></a>
+		</div>
+		</div>
+		
+		 <div id="aboutOur" class="clearfix">
+            <div id="ourBar">
+                <ul>
+                    <li><a href="#">︾网站简介</a></li>
+                    <li><a href="#">︾关于我们</a></li>
+                    <li><a href="#">︾联系我们</a></li>
+                </ul>
+            </div>
+
+
+
+            <h1>>>网站简介</h1>
+            <div id="textContent">
+            	
+                <p>肉牛养殖产业有着十分优异的前景，但是养殖出精良的肉牛却并不简单。大到厂址的选择，小到每日饲料的喂食都需要严谨的对待。生活中养牛失败的例子有很多，一部分原因在于最初的肉牛品种选择，更大的原因在于喂养，能否正确的喂养决定了最终的成败。</p>
+                <p>在肉牛的生长过程中，对营养物质特别是对蛋白质的需要量是不同的。添加的多了，肉牛消化吸收不了，不但造成饲料浪费，增加饲料成本，而且会给牛的胃肠增加负担，引起疾病；添加的少了，不能满足肉牛生长发育对蛋白质的需要，影响育肥效果和牛肉的质量。</p>
+                <p>我们项目的目的就是，在肉牛的饲养和育肥过程中，根据牛的不同生长阶段来调配饲料配方，依据牛的体重来计算牛一天的精料、粗料采食量。既可避免饲料浪费，又可充分发挥饲料的作用和肉牛的生产性能，可获得最高的饲料报酬和最佳的经济效益。并且在这基础之上加入肉牛疾病防御板块、肉牛品种板块以及肉牛成本与利润板块等。</p>
+            </div>
+
+        </div>
+		
+		</div>
+		
+		
+	</body>
+</html>
